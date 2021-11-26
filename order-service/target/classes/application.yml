@@ -41,3 +41,9 @@ ribbon:
 #    config:
 #      default:
 #        loggerLevel: FULL
+feign:
+  httpclient:
+    enabled: true #支持httpClient的开头
+    max-connections: 200 #最大连接数
+    connection-timeout: 6000   #链接超时
+    max-connections-per-route: 50  #单个路径的最大连接数

@@ -1,4 +1,9 @@
-package cn.itcast.order.pojo;
+package cn.itcast.feign.pojo;
+/*
+ *@Author:Administrator
+ *@Description:
+ *@Date:2021-11-26  15:19
+ */
 
 import lombok.Data;
 

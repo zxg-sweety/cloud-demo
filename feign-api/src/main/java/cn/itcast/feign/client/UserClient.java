@@ -1,18 +1,23 @@
-package cn.itcast.order.clients;/*
+package cn.itcast.feign.client;/*
  *创建人:
- *创建时间:2021-11-25 10:37
+ *创建时间:2021-11-26 15:21
  *描述:
+ *//*
+ *@Author:Administrator
+ *@Description:
+ *@Date:2021-11-26  15:21
  */
 
-import cn.itcast.order.pojo.User;
+import cn.itcast.feign.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestAttribute;
+
 
 @FeignClient("userservice")
 public interface UserClient {
 
-@GetMapping("/user/{id}")
+    @GetMapping("/user/{id}")
     User findById(@PathVariable("id") Long id);
+
 }
