@@ -21,37 +21,39 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
     @Autowired
     private PatternProperties patternProperties;
 
   /* @Value(value="${pattern.dateformat}")
     private String dateformat;*/
 
-
 /*    public void setDateformat(String dateformat) {
         this.dateformat = dateformat;
     }
-
     @RequestMapping(value = "/get", method = GET)
     @ResponseBody
     public String get() {
         return dateformat;
-    }*/
-
-    /**
-     * 路径： /user/110
-     *
-     * @param id 用户id
-     * @return 用户
-     */
-    @GetMapping("/{id}")
-    public User queryById(@PathVariable("id") Long id) {
-        return userService.queryById(id);
+    }*
+    * @Author liu-miss
+    * @Description //TODO
+    * @Date 12:15 2021-11-30
+    * @Param
+    * @return
+    **/
+    @GetMapping("prop")
+    public  PatternProperties properties() {
+        return patternProperties;
     }
 
     @GetMapping("now")
     public String Now() {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern(patternProperties.getDateformat()));
+    }
+
+    @GetMapping("/{id}")
+    public User queryById(@PathVariable("id") Long id,@RequestHeader(value = "Truth",required = false) String truth) {
+        System.out.println("Truth:"+truth);
+        return userService.queryById(id);
     }
 }

@@ -115,6 +115,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-webflux:5.2.13.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.synchronoss.cloud:nio-multipart-parser:1.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.synchronoss.cloud:nio-stream-storage:1.1.3" level="project" />
+    <orderEntry type="module" module-name="feign-api" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.18" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-openfeign:2.2.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-openfeign-core:2.2.7.RELEASE" level="project" />
